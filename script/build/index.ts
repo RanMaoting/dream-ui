@@ -12,6 +12,7 @@ export const removeDist = () => {
 
 //打包样式
 export const buildStyle = () => {
+  console.log(componentPath);
   return src(`${componentPath}/src/**/style/**.less`)
     .pipe(less())
     .pipe(autoprefixer())
