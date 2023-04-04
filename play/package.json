@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@easyest/components": "workspace:^1.0.0",
+    "@easyest/scheduler": "workspace:^",
     "easyest": "workspace:^1.0.5"
   }
 }
