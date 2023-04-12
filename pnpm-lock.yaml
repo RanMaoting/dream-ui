@@ -7,9 +7,15 @@ importers:
       '@antv/event-emitter':
         specifier: ^0.1.3
         version: 0.1.3
+      '@antv/g':
+        specifier: ^5.16.14
+        version: 5.16.14
       '@antv/g-canvas':
         specifier: ^1.9.41
         version: 1.9.41(@antv/g-lite@1.0.52)
+      '@antv/g-webgl':
+        specifier: ^1.7.55
+        version: 1.7.55(@antv/g-lite@1.0.52)
       '@types/gulp':
         specifier: ^4.0.10
         version: 4.0.10
@@ -326,6 +332,16 @@ packages:
     resolution: {integrity: sha512-4ddpsiHN9Pd4UIlWuKVK1C4IiZIdbwQvy9i7DUSI3xNJ89FPUFt8lxDYj8GzzfdllV0NkJTRxnG+FvLk0llidg==}
     dev: true
 
+  /@antv/g-camera-api@1.0.34(@antv/g-lite@1.0.52):
+    resolution: {integrity: sha512-3Sty9aNb3IEwzMQZDHTFMHjU5xZRo3yWwsCiycsNJHHiUl5KvW9b2mFXmcOr3uAb4v1jJzBmyRGL80TAV35H5A==}
+    peerDependencies:
+      '@antv/g-lite': ^1.0.0
+    dependencies:
+      '@antv/g-lite': 1.0.52
+      '@antv/util': 3.3.2
+      gl-matrix: 3.4.3
+    dev: true
+
   /@antv/g-canvas@1.9.41(@antv/g-lite@1.0.52):
     resolution: {integrity: sha512-3y6XzfQ69XcZu53HUsJAIzDMPIHs1k7mB9QL5FiaxvDGt2yeDWMrCihKZdNN2C0pVuItneMAZRNhj7ZKmybHvg==}
     peerDependencies:
@@ -341,6 +357,30 @@ packages:
       '@antv/util': 3.3.2
       '@types/offscreencanvas': 2019.7.0
       tslib: 2.5.0
+    dev: true
+
+  /@antv/g-css-layout-api@1.0.33(@antv/g-lite@1.0.52):
+    resolution: {integrity: sha512-XqPSrDaiJnl1OKH4/8X7am8s179Ds2egUnf34vmKVxTKJZvSex1jP4+jgmt3L2/ijDnH8WtMxctAPC6p7mpiqg==}
+    peerDependencies:
+      '@antv/g-lite': ^1.0.0
+    dependencies:
+      '@antv/g-lite': 1.0.52
+    dev: true
+
+  /@antv/g-css-typed-om-api@1.0.33(@antv/g-lite@1.0.52):
+    resolution: {integrity: sha512-Cq4WE7fEmbXyUZywSK6vPwzugPVVfZp6r908YjeY48gWnBelfwowWL76qdddObPTOm+xxR5Tl9EkCiAdrq/fVQ==}
+    peerDependencies:
+      '@antv/g-lite': ^1.0.0
+    dependencies:
+      '@antv/g-lite': 1.0.52
+    dev: true
+
+  /@antv/g-dom-mutation-observer-api@1.0.33(@antv/g-lite@1.0.52):
+    resolution: {integrity: sha512-htSNqW0eYpl9SUhYs4K3VWQHVdIyo7K0yA+539vP/Xg8dsHb5NKS0Kf5noMO7xhiMnT73k9HYkskPfOqxchB7w==}
+    peerDependencies:
+      '@antv/g-lite': ^1.0.0
+    dependencies:
+      '@antv/g-lite': 1.0.52
     dev: true
 
   /@antv/g-lite@1.0.52:
@@ -400,6 +440,24 @@ packages:
       tslib: 2.5.0
     dev: true
 
+  /@antv/g-plugin-device-renderer@1.7.52(@antv/g-lite@1.0.52):
+    resolution: {integrity: sha512-atImPGvotG8RCxLi/r4CR6GT6bNt4fXhpTeRFboDWB8uujN/HfOiMx8XCP/woARU4yrr960hcoBL/4K+Yf4mqw==}
+    peerDependencies:
+      '@antv/g-lite': ^1.0.0
+    dependencies:
+      '@antv/g-lite': 1.0.52
+      '@antv/g-plugin-image-loader': 1.1.47(@antv/g-lite@1.0.52)
+      '@antv/g-shader-components': 1.7.44
+      '@antv/util': 3.3.2
+      '@types/offscreencanvas': 2019.7.0
+      '@webgpu/types': 0.1.30
+      earcut: 2.2.4
+      eventemitter3: 4.0.7
+      gl-matrix: 3.4.3
+      regenerator-runtime: 0.13.11
+      tslib: 2.5.0
+    dev: true
+
   /@antv/g-plugin-dom-interaction@1.7.45(@antv/g-lite@1.0.52):
     resolution: {integrity: sha512-14sLKemcCxObQDQPSVjNqD9k7uVvf8OfeCJQCza7IadWqdQPEyvFfhCw458hxW+wQm8zqT6rki0Z3RGZW2SPDw==}
     peerDependencies:
@@ -428,6 +486,57 @@ packages:
       '@antv/g-lite': 1.0.52
       '@antv/util': 3.3.2
       tslib: 2.5.0
+    dev: true
+
+  /@antv/g-plugin-webgl-device@1.7.45(@antv/g-lite@1.0.52)(@antv/g-plugin-device-renderer@1.7.52):
+    resolution: {integrity: sha512-aD+ZFeiwX/mnjod5vWxMyQgREG2U+3t7ehYOeaUg3JuxZEt2jIgpCaQ3T9lixHmQXCrx45+1+y+AaST+s+3ZnQ==}
+    peerDependencies:
+      '@antv/g-lite': ^1.0.0
+      '@antv/g-plugin-device-renderer': ^1.0.0
+    dependencies:
+      '@antv/g-lite': 1.0.52
+      '@antv/g-plugin-device-renderer': 1.7.52(@antv/g-lite@1.0.52)
+      '@antv/util': 3.3.2
+      eventemitter3: 4.0.7
+      tslib: 2.5.0
+    dev: true
+
+  /@antv/g-shader-components@1.7.44:
+    resolution: {integrity: sha512-8DPn2jh78ribCueBuU5/qFIeueHHuUI2If7Hwx4Z4C82Rv5hdImc1tsHG/QD8cjp9STUqARMBjs0FS+h/12XcQ==}
+    dev: true
+
+  /@antv/g-web-animations-api@1.0.34(@antv/g-lite@1.0.52):
+    resolution: {integrity: sha512-svqHWdC1jEoEla8yW2EzHaac7Lg2vnzvowSpMjYk/lIZyr9FvZ5flR5e84wLkYF91Q+hx3ouvn2DrRNVhNA2yQ==}
+    peerDependencies:
+      '@antv/g-lite': ^1.0.0
+    dependencies:
+      '@antv/g-lite': 1.0.52
+      '@antv/util': 3.3.2
+    dev: true
+
+  /@antv/g-webgl@1.7.55(@antv/g-lite@1.0.52):
+    resolution: {integrity: sha512-sRLAxUvOlKHX/nGnuwsbBMF24xzT+z6Meo1uLaK9ffE1f6Rx5KGmgf46ZnlNPoSHjeHe2dnxqC0RHOMfdMT3eQ==}
+    peerDependencies:
+      '@antv/g-lite': ^1.0.0
+    dependencies:
+      '@antv/g-lite': 1.0.52
+      '@antv/g-plugin-device-renderer': 1.7.52(@antv/g-lite@1.0.52)
+      '@antv/g-plugin-dom-interaction': 1.7.45(@antv/g-lite@1.0.52)
+      '@antv/g-plugin-html-renderer': 1.7.49(@antv/g-lite@1.0.52)
+      '@antv/g-plugin-image-loader': 1.1.47(@antv/g-lite@1.0.52)
+      '@antv/g-plugin-webgl-device': 1.7.45(@antv/g-lite@1.0.52)(@antv/g-plugin-device-renderer@1.7.52)
+      '@antv/util': 3.3.2
+    dev: true
+
+  /@antv/g@5.16.14:
+    resolution: {integrity: sha512-5RdKy3IOQxa8+sJzN0yVEufXkKRTLcx2WO5eM7Dh+QnpN75InyD5PXbSFhe8bb3NelQYAJwXFTJpNrPacqALYg==}
+    dependencies:
+      '@antv/g-camera-api': 1.0.34(@antv/g-lite@1.0.52)
+      '@antv/g-css-layout-api': 1.0.33(@antv/g-lite@1.0.52)
+      '@antv/g-css-typed-om-api': 1.0.33(@antv/g-lite@1.0.52)
+      '@antv/g-dom-mutation-observer-api': 1.0.33(@antv/g-lite@1.0.52)
+      '@antv/g-lite': 1.0.52
+      '@antv/g-web-animations-api': 1.0.34(@antv/g-lite@1.0.52)
     dev: true
 
   /@antv/util@3.3.2:
@@ -2941,6 +3050,10 @@ packages:
       - vue
     dev: true
 
+  /@webgpu/types@0.1.30:
+    resolution: {integrity: sha512-9AXJSmL3MzY8ZL//JjudA//q+2kBRGhLBFpkdGksWIuxrMy81nFrCzj2Am+mbh8WoU6rXmv7cY5E3rdlyru2Qg==}
+    dev: true
+
   /abbrev@1.1.1:
     resolution: {integrity: sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==}
     dev: true
@@ -4405,6 +4518,10 @@ packages:
     dependencies:
       is-plain-object: 2.0.4
       object.defaults: 1.1.0
+    dev: true
+
+  /earcut@2.2.4:
+    resolution: {integrity: sha512-/pjZsA1b4RPHbeWZQn66SWS8nZZWLQQ23oE3Eam7aroEFGEvwKAsJfZ9ytiEMycfzXWpca4FA9QIOehf7PocBQ==}
     dev: true
 
   /eastasianwidth@0.2.0:
